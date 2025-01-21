@@ -1,0 +1,27 @@
+.home-container {
+    padding: 24px;
+    text-align: center;
+}
+
+.home-container-h1 {
+    font-size: 24px;
+    color: #333;
+    margin:5px 0px 0px 17%;
+
+}
+
+.home-container-p {
+    font-size: 18px;
+    margin:10px 0px 0px 80%;
+    color: #000000;
+    padding: 2px;
+    font-family: sans-serif;
+}
+.span-p{
+    color: #333;
+    font-weight: bold;
+    font-family: sans-serif;
+
+    
+
+}

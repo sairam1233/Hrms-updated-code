@@ -1,0 +1,121 @@
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 8px;
+    color: #000;
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+.calendar-header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.calendar-render{
+    margin: 5px 100px 50px auto;
+    width: 70%;
+}
+
+.rbc-day-bg {
+    width: 10px;  /* Set a fixed width for the date cell */
+    height:100px; /* Set a fixed height to match the width */
+    padding: 0;   /* Remove any default padding */
+    display: flex; /* Use flexbox to center the date */
+    align-items: center; /* Vertically center the date text */
+    justify-content: center; /* Horizontally center the date text */
+}
+
+/* Style for the 'Today' button in the calendar header */
+.rbc-btn-group.rbc-today-btn {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+/* Hover effect for the 'Today' button */
+.rbc-btn-group.rbc-today-btn:hover {
+    background-color: #1E90FF;
+    font-weight: bold;
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 8px #00000033; 
+}
+
+.event-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.event-form input,
+.event-form select {
+    padding: 2px 5px;
+    border: none; 
+    height: 28px;
+    width: 10%;
+    border-bottom: 1px #2a2a72 solid;
+    font-size: 1rem;
+    outline: none; 
+    background-color: #ffffff;
+    transition: all 0.3s ease; 
+}
+
+.event-form input:hover,
+.event-form select:hover {
+    background-color: #fff;
+    transform: translateY(-2px); 
+}
+
+
+
+.add-event-btn {
+    padding: 5px 10px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.add-event-btn:hover {
+    background-color: #1E90FF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.add-event-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 9, 157, 0.5); 
+}
+
+.rbc-header-bg {
+    background-color: #ccc;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+

@@ -1,0 +1,9 @@
+.footer {
+    text-align: center;
+    padding: 5px 0;
+    background-color: #fff9f9;
+    color: #000000;
+    box-shadow: #000000 1px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}

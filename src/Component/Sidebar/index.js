@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react'; 
 import Cookies from 'js-cookie';
-import { FaUser, FaCalendar, FaBell, FaCog, FaSignOutAlt, FaEnvelope, FaHome, FaClock, FaCalendarCheck, FaMoneyBill, FaBuilding, FaChevronDown, FaChevronUp, FaBars } from 'react-icons/fa';
+import { FaUser, FaCalendar, FaBell, FaCog, FaSignOutAlt, FaEnvelope, FaHome, FaClock, FaCalendarCheck, FaMoneyBill, FaBuilding, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import { Navbar, Container, Nav, Dropdown } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 
 const Sidebar = () => {
     const [attendanceOpen, setAttendanceOpen] = useState(false);
@@ -15,11 +17,8 @@ const Sidebar = () => {
     const [username, setUsername] = useState('User');
     const navigate = useNavigate();
 
-    useEffect(() => {
-        fetchUsername();
-    }, []);
-
-    const fetchUsername = async () => {
+    // Wrap fetchUsername in useCallback to avoid unnecessary recreation
+    const fetchUsername = useCallback(async () => {
         const token = Cookies.get('token');
         if (!token) {
             console.error('Token not found');
@@ -44,13 +43,16 @@ const Sidebar = () => {
         } catch (error) {
             console.error('Error fetching data:', error);
         }
-    };
+    }, [navigate]);
+
+    useEffect(() => {
+        fetchUsername();
+    }, [fetchUsername]);
 
     const handleLogout = () => {
         Cookies.remove('token');
         navigate('/');
     };
-
 
     const handleNavigation = (path) => {
         navigate(path);
@@ -143,7 +145,7 @@ const Sidebar = () => {
                     <Container fluid className="d-flex justify-content-between align-items-center">
                         <Nav className="d-flex align-items-center">
                             <Nav.Link onClick={() => setIsExpanded(!isExpanded)} className="toggle-icon">
-                                <FaBars size={25} />
+                                {isExpanded ? <MdOutlineKeyboardDoubleArrowLeft size={29} /> : <MdKeyboardDoubleArrowRight size={29}  />}
                             </Nav.Link>
                         </Nav>
 

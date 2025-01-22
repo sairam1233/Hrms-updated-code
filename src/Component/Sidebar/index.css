@@ -131,6 +131,7 @@
     border: none !important;
     background-color: transparent;
     padding: 14px;
+    padding-left: 0px;
 }
 .sidebar-subitem:hover {
     transition: 0.3s;

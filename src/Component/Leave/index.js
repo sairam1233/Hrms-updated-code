@@ -30,8 +30,8 @@ const LeaveForm = () => {
 
   return (
     <div className="leave-form-container">
-      <h2>Apply for Leave</h2>
-      <p>
+      <h2 className="tll">Apply for Leave</h2>
+      <p className="pp1">
         NOTE: <span>Leave Can be Applied 10 Days in Advance</span>
       </p>
       <form onSubmit={handleSubmit}>

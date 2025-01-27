@@ -1,6 +1,7 @@
 .home-container {
     padding: 24px;
     text-align: center;
+
 }
 
 .home-container-h1 {
@@ -15,6 +16,9 @@
     background-color:white;
     padding-right: 30px;
     padding-left: 30px;
+    margin-right: 20px !important;
+    padding-bottom: 61px;
+    
 }
 
 .home-container-p {
@@ -40,18 +44,23 @@
     justify-content: space-between;
     gap: 30px;
     margin-bottom: 30px;
-    
 }
-.box:hover{
-    scale: 1.05;
-    transition: 0.3s;
+.con{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 6px;
+  margin-top: 30px;
+  padding-right: 20px;
 }
+
 .box{
-    padding: 20px;
+    padding: 10px;
     border-radius: 6px;
     border: none;
-    background-color: white;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     height: 140px;
     width: 50%;
     display: flex;
@@ -62,11 +71,23 @@
     cursor: pointer;
     transition: 0.3s;
 }
+.box:hover{
+  scale: 1.05;
+  transition: 0.3s;
+  background-color: transparent;
+}
+.hr11{
+  height: 105px;
+  border-radius: 10px;
+  border: 1.3px solid !important;
+  border-color: #000000;
+}
 .tl{
     font-size: 20px;
     font-family: "roboto";
     color: #162F57;   
     font-weight: bold;
+    padding-bottom: 10px;
 }
 .ds{
     font-family: "roboto";

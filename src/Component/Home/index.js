@@ -53,28 +53,27 @@ const Home = () => {
                 <span className="span-p">Date:</span>{currentDateTime}
             </p>
 
-            <div className="con1">
+            <div className="con">
                 <div className="box">
                     <h5 className="tl">Payroll</h5>
                     <p className="ds">23 Calendar days</p>
                 </div>
+                <hr className='hr11'/>
                 <div className="box">
                     <h5 className="tl">Total Leaves</h5>
                     <p className="ds">1</p>
                 </div>
-            </div>
-
-            <div className="con1">
+                <hr className='hr11'/>
                 <div className="box">
                     <h5 className="tl">Working Days</h5>
                     <p className="ds">22</p>
                 </div>
+                <hr className='hr11'/>
                 <div className="box">
                     <h5 className="tl">Payroll Processed</h5>
                     <p className="ds">23 days</p>
                 </div>
             </div>
-
             <div className='con1'>
                  {/* Timing Details Section */}
             <div className="timing-details">
